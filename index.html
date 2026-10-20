@@ -4,10 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Hani | Data Engineer & Data Analyst</title>
+
   <style>
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -15,6 +23,7 @@
       color: #eaf2ff;
       line-height: 1.7;
     }
+
     header {
       padding: 20px 8%;
       display: flex;
@@ -24,19 +33,50 @@
       gap: 15px;
       border-bottom: 1px solid #26344b;
     }
-    .logo { color: #54d6e8; font-weight: bold; }
+
+    .logo {
+      color: #54d6e8;
+      font-weight: bold;
+    }
+
     nav a {
       color: #d5e2f3;
       text-decoration: none;
       margin-right: 16px;
     }
-    nav a:hover { color: #54d6e8; }
-    main { max-width: 1100px; margin: auto; padding: 0 24px; }
-    section { padding: 65px 0; }
-    .hero { padding: 100px 0 75px; }
-    h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.15; }
-    h2 { color: #54d6e8; }
-    .intro { color: #a8bdd5; max-width: 700px; }
+
+    nav a:hover {
+      color: #54d6e8;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .hero {
+      padding: 100px 0 75px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.15;
+    }
+
+    h2 {
+      color: #54d6e8;
+    }
+
+    .intro {
+      color: #a8bdd5;
+      max-width: 700px;
+    }
+
     .button {
       display: inline-block;
       background: #54d6e8;
@@ -47,39 +87,104 @@
       font-weight: bold;
       margin-top: 15px;
     }
-    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
     .skill {
       background: #17263b;
       border: 1px solid #304761;
       padding: 8px 14px;
       border-radius: 20px;
     }
+
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
     }
+
     .card {
       background: #142238;
       padding: 24px;
       border: 1px solid #304761;
       border-radius: 14px;
+      transition: transform 0.3s ease,
+                  border-color 0.3s ease;
     }
-    .card h3 { color: #ffffff; }
-    .card p { color: #b3c5dc; }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #54d6e8;
+    }
+
+    .card h3 {
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #b3c5dc;
+    }
+
+    /* Dashboard screenshot styling */
+
+    .project-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .project-tags {
+      color: #54d6e8 !important;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
       border-top: 1px solid #26344b;
       color: #a8bdd5;
     }
-    a { color: #54d6e8; }
+
+    a {
+      color: #54d6e8;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 20px 24px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      section {
+        padding: 45px 0;
+      }
+    }
   </style>
 </head>
+
 <body>
 
+  <!-- HEADER -->
   <header>
     <div class="logo">HANI / DATA PORTFOLIO</div>
+
     <nav>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
@@ -89,28 +194,51 @@
   </header>
 
   <main>
+
+    <!-- HOME -->
     <section class="hero">
       <p class="logo">WELCOME TO MY PORTFOLIO</p>
-      <h1>Hi, I'm Hani.<br>Data Engineer & Data Analyst.</h1>
+
+      <h1>
+        Hi, I'm Hani.<br>
+        Data Engineer & Data Analyst.
+      </h1>
+
       <p class="intro">
         I transform raw data into meaningful insights,
-        build data pipelines, automate workflows, and
-        create dashboards that support business decisions.
+        build reliable data pipelines, automate workflows,
+        and create interactive dashboards that support
+        better business decisions.
       </p>
-      <a class="button" href="#projects">Explore My Projects</a>
+
+      <a class="button" href="#projects">
+        Explore My Projects
+      </a>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
       <h2>About Me</h2>
+
       <p>
-        I'm passionate about data engineering, analytics,
-        business intelligence, and solving real-world
-        problems through data-driven solutions.
+        I'm passionate about data engineering,
+        data analytics, business intelligence,
+        and solving real-world problems through
+        data-driven solutions.
+      </p>
+
+      <p>
+        My experience includes developing Power BI
+        dashboards, working with Snowflake data
+        pipelines, transforming datasets using SQL,
+        and automating reporting workflows with Python.
       </p>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills">
       <h2>Technical Skills</h2>
+
       <div class="skills">
         <span class="skill">Python</span>
         <span class="skill">SQL</span>
@@ -120,55 +248,129 @@
         <span class="skill">DAX</span>
         <span class="skill">Power Query</span>
         <span class="skill">ETL / ELT</span>
+        <span class="skill">Data Warehousing</span>
         <span class="skill">Data Visualization</span>
         <span class="skill">Automation</span>
+        <span class="skill">Google Apps Script</span>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects">
       <h2>Featured Projects</h2>
+
       <div class="projects">
+
+        <!-- PROJECT 1 -->
         <article class="card">
+
+          <img
+            src="corporate-kpi.png"
+            alt="Corporate KPI Dashboard"
+            class="project-image"
+          >
+
           <h3>Corporate KPI Dashboard</h3>
-          <p>Interactive Power BI dashboard for
-          monitoring corporate performance and KPIs.</p>
-          <p>Power BI · DAX · Power Query</p>
+
+          <p>
+            Interactive Power BI dashboard designed
+            to monitor corporate performance,
+            track KPI achievements, and support
+            management reporting.
+          </p>
+
+          <p class="project-tags">
+            Power BI · DAX · Power Query
+          </p>
+
         </article>
 
+        <!-- PROJECT 2 -->
         <article class="card">
+
           <h3>Utilities Dashboard</h3>
-          <p>Dashboard for analyzing utility consumption
-          trends and operational performance.</p>
-          <p>Power BI · Data Analytics</p>
+
+          <p>
+            A business intelligence dashboard
+            designed to analyze utility consumption,
+            monitor usage trends, and support
+            operational performance reporting.
+          </p>
+
+          <p class="project-tags">
+            Power BI · Data Analytics · Data Modeling
+          </p>
+
         </article>
 
+        <!-- PROJECT 3 -->
         <article class="card">
+
           <h3>Snowflake Data Pipeline</h3>
-          <p>Data ingestion and transformation using
-          Bronze, Silver, and Gold data layers.</p>
-          <p>Snowflake · SQL · AWS S3</p>
+
+          <p>
+            Data engineering pipeline demonstrating
+            ingestion from AWS S3 into Snowflake,
+            with Bronze, Silver, and Gold layers
+            for data validation, transformation,
+            and analytics-ready datasets.
+          </p>
+
+          <p class="project-tags">
+            Snowflake · SQL · AWS S3 · ETL/ELT
+          </p>
+
         </article>
 
+        <!-- PROJECT 4 -->
         <article class="card">
+
           <h3>Python Report Automation</h3>
-          <p>Automating repetitive reporting workflows
-          and data processing tasks.</p>
-          <p>Python · Automation</p>
+
+          <p>
+            Automation of repetitive reporting
+            workflows and data processing tasks
+            using Python to improve efficiency
+            and reduce manual effort.
+          </p>
+
+          <p class="project-tags">
+            Python · Automation · Data Processing
+          </p>
+
         </article>
+
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
       <h2>Let's Connect</h2>
-      <p>Interested in discussing data engineering,
-      analytics, or business intelligence opportunities?</p>
-      <a href="https://github.com/irdhanani"
-         target="_blank" rel="noopener noreferrer">
+
+      <p>
+        I'm interested in opportunities involving
+        Data Engineering, Data Analytics,
+        and Business Intelligence.
+      </p>
+
+      <p>
+        Feel free to explore my projects and
+        connect with me on GitHub.
+      </p>
+
+      <a
+        class="button"
+        href="https://github.com/irdhanani"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         Visit My GitHub
       </a>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
     © 2026 Hani. Built with HTML & CSS.
   </footer>
